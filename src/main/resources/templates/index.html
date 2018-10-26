@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<body>
+        hello,my name is loyo!
+        <button onclick="test1();">跨域</button>
+    <div id="test">
+
+    </div>
+</body>
+<script type="text/javascript">
+    function test1() {
+        $.ajax({
+            url:"http://101.236.19.193:17801/index",
+            // url:"http://101.236.57.220:17801/index",
+            type:"POST",
+            dataType:"html",
+            success:function(data){
+               $("#test").html(data);
+            }
+        });
+    }
+</script>
+</html>
